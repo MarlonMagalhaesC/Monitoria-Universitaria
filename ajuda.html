@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- ===== ICON ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>PUC Minas - Programa de Monitoria</title>
+</head>
+
+<body id="body-pd">
+  <div class="l-navbar" id="navbar">
+    <nav class="nav">
+      <div>
+        <div class="nav__brand">
+          <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+          <a href="ajuda.html" class="nav__logo"><img id="logo" src="assets/img/logo.png" width="15%"></a>
+        </div>
+
+        <div class="nav__list">
+          <a href="painel_aluno.html" class="nav__link active">
+            <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Painel de Controle</span>
+          </a>
+
+          <a href="mensagem.html" class="nav__link">
+            <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Mensagem</span>
+          </a>
+
+          <a href="agenda.html" class="nav__link">
+            <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Calendario</span>
+          </a>
+
+          <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=teams&type=meetup-join&enableMobilePage=true&suppressPrompt=true&tenantId=14cbd5a7-ec94-46ba-b314-cc0fc972a161"
+            class="nav__link">
+            <ion-icon name="tv" class="nav__icon"></ion-icon>
+            <span class="nav__name">Teams</span>
+          </a>
+
+
+          <a href="ajuda.html" class="nav__link">
+            <ion-icon name="help-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Ajuda</span>
+          </a>
+
+          <a href="config.html" class="nav__link">
+            <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Configurações</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <img id="foto" src="assets/img/foto.png" width="12%">
+      </div>
+
+      <a href="login.html" class="nav__link">
+        <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+        <span class="nav__name">Sair</span>
+      </a>
+    </nav>
+  </div>
+
+  <section class="faq pt-2">
+    <div class="container">
+      <div class="faq-title">
+        <h2>Ajuda?</h2>
+        <p>Perdido, Tente aqui primeiro!</p>
+      </div>
+
+      <ul class="faq-list">
+        <li data-aos="fade-up" data-aos-delay="100" class="aos-init aos-animate">
+          <a data-toggle="collapse" class="collapsed" href="#faq1" aria-expanded="false">Página de Boas-vindas <i
+              class="fas fa-arrow-up"></i></a>
+          <div id="faq1" class="collapse" data-parent=".faq-list">
+            <p>
+              Bem-vindo à nossa página de ajuda! Aqui você encontrará informações e recursos para tornar sua experiência
+              em nosso site mais fácil e agradável. Se tiver alguma dúvida, você veio ao lugar certo.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
+          <a data-toggle="collapse" href="#faq2" class="collapsed">Como faço para criar uma conta em seu site?<i
+              class="fas fa-arrow-up"></i></a>
+          <div id="faq2" class="collapse" data-parent=".faq-list">
+            <p>
+              Para criar uma conta, clique no botão "Cadastre-se" na página inicial e siga as instruções. Você precisará
+              fornecer seu nome, endereço de e-mail e criar uma senha.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="300" class="aos-init aos-animate">
+          <a data-toggle="collapse" href="#faq3" class="collapsed">Esqueci minha senha. Como posso me recuperar? <i
+              class="fas fa-arrow-up"></i></a>
+          <div id="faq3" class="collapse" data-parent=".faq-list">
+            <p>
+              Se você esqueceu sua senha, vá para a página de login e clique no link "Esqueceu sua senha?". Insira o
+              endereço de e-mail associado à sua conta e siga as instruções enviadas para redefinir sua
+              senha. Nao esqueca de verificar sua caixa de spam se não receber o e-mail imediatamente.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">
+          <a data-toggle="collapse" href="#faq4" class="collapsed">Como posso atualizar minhas informações de perfil? <i
+              class="fas fa-arrow-up"></i></a>
+          <div id="faq4" class="collapse" data-parent=".faq-list">
+            <p>
+              Para atualizar suas informações de perfil, faça login em sua conta e acesse a seção "Perfil",
+              "Configurações". Lá, você pode editar seu nome, foto de perfil e outras informações
+              pessoais. Lembre-se de salvar as alterações após fazer as edições.
+            </p>
+          </div>
+        </li>
+
+
+        <li data-aos="fade-up" data-aos-delay="500" class="aos-init aos-animate">
+          <a data-toggle="collapse" href="#faq5" class="collapsed">O que devo fazer se suspeitar de atividades
+            fraudulentas em minha conta? <i class="fas fa-arrow-up"></i></a>
+          <div id="faq5" class="collapse" data-parent=".faq-list">
+            <p>
+              Se você suspeitar de atividades fraudulentas em sua conta, entre em contato conosco imediatamente. Nossa
+              equipe de suporte pode ajudá-lo a garantir a segurança de sua conta, alterando sua senha, revisando suas
+              atividades recentes e tomando as medidas necessárias para protegê-lo contra fraude.
+            </p>
+          </div>
+        </li>
+        
+        <li data-aos="fade-up" data-aos-delay="600" class="aos-init aos-animate">
+          <a data-toggle="collapse" href="#faq6" class="collapsed"> Como faço para entrar em contato com a PUC: <i class="fas fa-arrow-up"></i></a>
+          <div id="faq6" class="collapse" data-parent=".faq-list">
+            <p>
+             Para entrar em contato com a PUC é so você clicar na imagem abaixo que você irá ser direcionado para a página de contatos da PUC.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <a href="https://www.pucminas.br/destaques/Paginas/funcionamento-puc-minas.aspx?fbclid=IwAR3VJpvS9OlaiIsc_Egokip8pjUnGAoqAolnYjXP_APEu9dAT8tW4ySQE-A#:~:text=Via%20email%2C%20pelo%20link%20%22Fale,%2C%20das%207h%20%C3%A0s%2017h).&text=(31)%203319%2D4525%20%2F,e%20canvas%40pucminas.br.">
+      <img id="banner" src="assets/img/banner-portal-central-informacoes.jpg" class="d-block w-100"></a>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ===== IONICONS ===== -->
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+  <!-- ===== MAIN JS ===== -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

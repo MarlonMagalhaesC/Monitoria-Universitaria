@@ -1,0 +1,618 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --nav-width: 92px;
+
+  /*===== Colores =====*/
+  --first-color: #0C5DF4;
+  --bg-color: #12192C;
+  --sub-color: #B6CEFC;
+  --white-color: #FFF;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 2rem 0 0 6.75rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*===== l NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  padding: 1.5rem 1.5rem 2rem;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+/*===== NAV =====*/
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__brand {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.nav__toggle {
+  font-size: 1.25rem;
+  padding: .75rem;
+  cursor: pointer;
+}
+
+.nav__logo {
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.nav__link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: .75rem;
+  padding: .75rem;
+  color: var(--white-color);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  background-color: var(--first-color);
+}
+
+.nav__icon {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.nav__name {
+  font-size: var(--small-font-size);
+  color: white;
+}
+
+/*Expander menu*/
+.expander {
+  width: calc(var(--nav-width) + 40.25rem);
+}
+
+/*Add padding body*/
+.body-pd {
+  padding: 2rem 0 0 16rem;
+}
+
+/*Active links menu*/
+.active {
+  background-color: var(--first-color);
+}
+
+/*Rotate icon*/
+.rotate {
+  transform: rotate(180deg);
+}
+
+#navbar.l-navbar.expander {
+  width: 250px;
+}
+
+a.nav__link {
+  width: 200px;
+}
+
+.nav__link.collapse {
+  width: 200px;
+}
+
+/*FIM*/
+
+#logo {
+  margin-left: 4%;
+  margin-bottom: -2%;
+}
+
+#foto {
+  border-radius: 50%;
+  margin-left: 8%;
+  margin-bottom: 35%;
+}
+
+#nome {
+  margin-left: 11%;
+  font-size: 10px;
+}
+
+.card {
+  height: 100%;
+}
+
+
+.inbox .inbox-menu ul {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none
+}
+
+.inbox .inbox-menu ul li {
+  height: 30px;
+  padding: 5px 15px;
+  position: relative
+}
+
+.inbox .inbox-menu ul li:hover,
+.inbox .inbox-menu ul li.active {
+  background: #e4e5e6
+}
+
+.inbox .inbox-menu ul li.title {
+  margin: 20px 0 -5px 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #d1d4d7
+}
+
+.inbox .inbox-menu ul li.title:hover {
+  background: 0 0
+}
+
+.inbox .inbox-menu ul li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #3d3f42
+}
+
+.inbox .inbox-menu ul li a i {
+  margin-right: 10px
+}
+
+.inbox .inbox-menu ul li a .label {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: block;
+  min-width: 14px;
+  height: 14px;
+  padding: 2px
+}
+
+.inbox ul.messages-list {
+  list-style: none;
+  margin: 15px -15px 0 -15px;
+  padding: 15px 15px 0 15px;
+  border-top: 1px solid #d1d4d7
+}
+
+.inbox ul.messages-list li {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px
+}
+
+.inbox ul.messages-list li a {
+  color: #3d3f42
+}
+
+.inbox ul.messages-list li a:hover {
+  text-decoration: none
+}
+
+.inbox ul.messages-list li.unread .header,
+.inbox ul.messages-list li.unread .title {
+  font-weight: 700
+}
+
+.inbox ul.messages-list li:hover {
+  background: #e4e5e6;
+  border: 1px solid #d1d4d7;
+  padding: 9px
+}
+
+.inbox ul.messages-list li:hover .action {
+  color: #d1d4d7
+}
+
+.inbox ul.messages-list li .header {
+  margin: 0 0 5px 0
+}
+
+.inbox ul.messages-list li .header .from {
+  width: 49.9%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis
+}
+
+.inbox ul.messages-list li .header .date {
+  width: 50%;
+  text-align: right;
+  float: right
+}
+
+.inbox ul.messages-list li .title {
+  margin: 0 0 5px 0;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis
+}
+
+.inbox ul.messages-list li .description {
+  font-size: 12px;
+  padding-left: 29px
+}
+
+.inbox ul.messages-list li .action {
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+  margin-right: 10px;
+  color: #d1d4d7
+}
+
+.inbox ul.messages-list li .action .fa-check-square-o {
+  margin: 0 -1px 0 1px
+}
+
+.inbox ul.messages-list li .action .fa-square {
+  float: left;
+  margin-top: -16px;
+  margin-left: 4px;
+  font-size: 11px;
+  color: #fff
+}
+
+.inbox ul.messages-list li .action .fa-star.bg {
+  float: left;
+  margin-top: -16px;
+  margin-left: 3px;
+  font-size: 12px;
+  color: #fff
+}
+
+.inbox .message .message-title {
+  margin-top: 30px;
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 14px
+}
+
+.inbox .message .header {
+  margin: 20px 0 30px 0;
+  padding: 10px 0 10px 0;
+  border-top: 1px solid #d1d4d7;
+  border-bottom: 1px solid #d1d4d7
+}
+
+.inbox .message .header .avatar {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  height: 34px;
+  width: 34px;
+  float: left;
+  margin-right: 10px
+}
+
+.inbox .message .header i {
+  margin-top: 1px
+}
+
+.inbox .message .header .from {
+  display: inline-block;
+  width: 50%;
+  font-size: 12px;
+  margin-top: -2px;
+  color: #d1d4d7
+}
+
+.inbox .message .header .from span {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d3f42
+}
+
+.inbox .message .header .date {
+  display: inline-block;
+  width: 29%;
+  text-align: right;
+  font-size: 12px;
+  margin-top: 18px
+}
+
+.inbox .message .attachments {
+  border-top: 3px solid #e4e5e6;
+  border-bottom: 3px solid #e4e5e6;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 12px
+}
+
+.inbox .message .attachments ul {
+  list-style: none;
+  margin: 0 0 0 -40px
+}
+
+.inbox .message .attachments ul li {
+  margin: 10px 0
+}
+
+.inbox .message .attachments ul li .label {
+  padding: 2px 4px
+}
+
+.inbox .message .attachments ul li span.quickMenu {
+  float: right;
+  text-align: right
+}
+
+.inbox .message .attachments ul li span.quickMenu .fa {
+  padding: 5px 0 5px 25px;
+  font-size: 14px;
+  margin: -2px 0 0 5px;
+  color: #d1d4d7
+}
+
+.inbox .contacts ul {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none
+}
+
+.inbox .contacts ul li {
+  height: 30px;
+  padding: 5px 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
+  position: relative;
+  cursor: pointer
+}
+
+.inbox .contacts ul li .label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  margin: 0 5px 2px 0
+}
+
+.inbox .contacts ul li:hover {
+  background: #e4e5e6
+}
+
+
+
+
+.faq {
+  padding: 60px 0;
+}
+
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li {
+  background-color: #ffee5a;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+}
+
+.faq .faq-list i {
+  font-size: 16px;
+  position: absolute;
+  left: -25px;
+  top: 6px;
+  transition: 1s;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 17px;
+  border-bottom: 2px dashed #ffffff;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.faq .faq-list p {
+  padding-top: 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.collapsed i.fas.fa-arrow-up {
+  transform: rotate(180deg);
+}
+
+#banner {
+  border-radius: 10px;
+}
+
+/*Config.html CSS*/
+
+.config-form {
+  margin-left: 35%;
+  margin-top: 5%;
+}
+
+.change-image {
+  margin-left: 36%;
+  margin-top: 2%;
+}
+
+.form-group {
+
+  margin-bottom: 8px;
+}
+
+
+.card {
+  margin-bottom: 24px;
+  box-shadow: 0 2px 3px #e4e8f0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #eff0f2;
+  border-radius: 1rem;
+}
+
+.avatar-md {
+  height: 4rem;
+  width: 4rem;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #f1f3f7;
+  border: 1px solid #eff0f2;
+  border-radius: 0.75rem;
+}
+
+.avatar-title {
+  align-items: center;
+  background-color: #3b76e1;
+  color: #fff;
+  display: flex;
+  font-weight: 500;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.bg-soft-primary {
+  background-color: rgba(59, 118, 225, .25) !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.badge-soft-danger {
+  color: #f56e6e !important;
+  background-color: rgba(245, 110, 110, .1);
+}
+
+.badge-soft-success {
+  color: #63ad6f !important;
+  background-color: rgba(99, 173, 111, .1);
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 75%;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.75rem;
+}
+
+#sair{
+  padding-left: 90%;
+}
+
+.nav.nav{
+  height: auto;
+}
+
+@media (min-width: 700px) {
+
+  #modal1 .modal-dialog {
+    max-width: 50%;
+
+  }
+
+  #modal2 .modal-dialog {
+    max-width: 80%;
+  }
+
+  #modal3 .modal-dialog {
+    max-width: 90%;
+  }
+
+  #add_conteudo .modal-dialog {
+    max-width: 50%;
+  }
+  
+}

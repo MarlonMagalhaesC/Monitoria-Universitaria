@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== BOOTSTRAP ===== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- ===== ICON ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <title>PUC Minas - Programa de Monitoria</title>
+</head>
+
+<body id="body-pd">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="caixadesaida.html" class="nav__logo"><img id="logo" src="assets/img/logo.png"
+                            width="15%"></a>
+                </div>
+
+                <div class="nav__list">
+                    <a href="painel_aluno.html" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Painel de Controle</span>
+                    </a>
+
+                    <a href="mensagem.html" class="nav__link">
+                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Mensagem</span>
+                    </a>
+
+                    <a href="agenda.html" class="nav__link">
+                        <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Calendario</span>
+                    </a>
+
+                    <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=teams&type=meetup-join&enableMobilePage=true&suppressPrompt=true&tenantId=14cbd5a7-ec94-46ba-b314-cc0fc972a161"
+                        class="nav__link">
+                        <ion-icon name="tv" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Teams</span>
+                    </a>
+
+
+                    <a href="ajuda.html" class="nav__link">
+                        <ion-icon name="help-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ajuda</span>
+                    </a>
+
+                    <a href="config.html" class="nav__link">
+                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div>
+                <img id="foto" src="assets/img/foto.png" width="12%">
+            </div>
+
+            <a href="login.html" class="nav__link">
+                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                <span class="nav__name">Sair</span>
+            </a>
+        </nav>
+    </div>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="border-bottom" class="titulo">
+                    <h1>Caixa de Saída</h1>
+                </div>
+            </div>
+            <div class="col-2">
+                <div>
+                    <a href="login.html">
+                        <button type="button" class="btn btn-dark"><i class="fa-solid fa-right-from-bracket"></i>
+                            Sair</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 pt-2">
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+                    rel="stylesheet">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
+                    Enviar Mensagem
+                </button>
+                <hr>
+                <div>
+                    <ul>
+                        <li class="header"><strong>Pastas</strong></li>
+                        <li><a href="mensagem.html"><i class="fa fa-envelope"></i> Caixa de Entrada</a></li>
+                        <li><a href="caixadesaida.html"><i class="fa fa-envelope-o"></i> Caixa de Saída</a></li>
+                        <li><a href="importantes.html"><i class="fa fa-bookmark"></i> Importantes</a></li>
+                        <li><a href="Lixeira.html"><i class="fa fa-pencil-square-o"></i> Lixeira</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BEGIN INBOX CONTENT -->
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label style="margin-right: 8px;" class="">
+                            <div class="icheckbox_square-blue" style="position: relative;"><input type="checkbox"
+                                    id="check-all" class="icheck"
+                                    style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"><ins
+                                    class="iCheck-helper"
+                                    style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
+                            </div>
+                        </label>
+
+                        <div class="btn-group pt-4">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                Filtro <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Mark as read</a></li>
+                                <li><a href="#">Mark as unread</a></li>
+                                <li><a href="#">Mark as important</a></li>
+                                <li><a href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 search-form pt-2 pb-2 ">
+                        <form action="#" class="text-right">
+                            <div class="input-group">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Pesquisar"
+                                        aria-label="Search" id="searchInput">
+                                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                                </form>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="padding"></div>
+                <div class="text-danger mx-2">
+                    <h6>Falha na entrega. Até que o e-mail seja totalmente entregue, ele permanecerá na Caixa de saída.
+                    </h6>
+                </div>
+                <div class="table-responsive ">
+                    <table class="table">
+                        <tbody>
+                            <tr id="message1">
+                                <td class="action"><input type="checkbox" /> </td>
+                                <td class="action"><i class="fa fa-bookmark-o"></i></td>
+                                <td class="name text-danger"> [Não Enviada] <a href="#" data-bs-toggle="modal"
+                                        data-bs-target="#modal2"> Clenilson
+                                        Junior</a></td>
+                                <td class="subject"><a href="#" data-bs-toggle="modal" data-bs-target="#modal2"> Olá,
+                                        Clenilson
+                                        claro que te ajudo com switch em C# </a></td>
+                                <td class="time">08:30 PM</td>
+                            </tr>
+                            <tr id="message2">
+                                <td class="action"><input type="checkbox" /></td>
+                                <td class="action"><i class="fa fa-bookmark"></i></td>
+                                <td class="name text-danger"> [Não Enviada]<a href="#" data-bs-toggle="modal"
+                                        data-bs-target="#"> Gabriel Alvez</a>
+                                </td>
+                                <td class="subject"><a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                        Boa tarde, te ajudo sim com vetor em C# </a></td>
+                                <td class="time">15:30 PM</td>
+                            </tr>
+                            <tr id="message3" class="read">
+                                <td class="action"><input type="checkbox" /></td>
+                                <td class="action"><i class="fa fa-bookmark"></i></td>
+                                <td class="name text-danger"> [Não Enviada] <a href="#"> Tiago Barbacena</a></td>
+                                <td class="subject"><a href="#">Boa noite, com certeza posso te ajudar com JAVASCRIPT
+                                    </a></td>
+                                <td class="time">18:30 PM</td>
+                            </tr>
+                            <tr id="message4">
+                                <td class="action"><input type="checkbox" /></td>
+                                <td class="action"><i class="fa fa-bookmark-o"></i></td>
+                                <td class="name text-danger"> [Não Enviada]<a href="#"> Gabriela Martins</a></td>
+                                <td class="subject"><a href="#">Bom dia, me envie sua dúvida na matéria ... </a></td>
+                                <td class="time">07:30 PM</td>
+                            </tr>
+                            <tr id="message5" class="read">
+                                <td class="action"><input type="checkbox" /></td>
+                                <td class="action"><i class="fa fa-bookmark-o"></i></td>
+                                <td class="name text-danger"> [Não Enviada]<a href="#"> Matheus Santiago</a></td>
+                                <td class="subject"><a href="#">Ola, me mande o exercício que precisa de ajuda..</a>
+                                </td>
+                                <td class="time">08:30 PM</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#">Voltar</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item" aria-current="page">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Proxima</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Dados das mensagens
+                        var messages = [
+                            { id: 'message1', sender: 'Clenilson Junior', subject: 'Olá, Clenilson, claro que te ajudo com switch em C#', time: '08:30 PM' },
+                            { id: 'message2', sender: 'Gabriel Alvez', subject: 'Boa tarde, te ajudo sim com vetor em C#', time: '15:30 PM' },
+                            { id: 'message3', sender: 'Tiago Barbacena', subject: 'Boa noite, com certeza posso te ajudar com JAVASCRIPT', time: '18:30 PM' },
+                            { id: 'message4', sender: 'Gabriela Martins', subject: 'Bom dia, me envie sua dúvida na matéria ...', time: '07:30 PM' },
+                            { id: 'message5', sender: 'Matheus Santiago', subject: 'Ola, me mande o exercício que precisa de ajuda..', time: '08:30 PM' }
+                            // Adicione mais mensagens conforme necessário
+                        ];
+
+                        // Função para exibir mensagens na tabela
+                        function showMessages(page) {
+                            var pageSize = 2; // Quantidade de mensagens por página
+                            var start = (page - 1) * pageSize;
+                            var end = start + pageSize;
+                            var messagesToShow = messages.slice(start, end);
+
+                            var tableBody = document.querySelector('.table tbody');
+                            tableBody.innerHTML = ''; // Limpa o conteúdo atual da tabela
+
+                            messagesToShow.forEach(function (message) {
+                                var row = document.createElement('tr');
+                                row.id = message.id;
+                                row.innerHTML = `
+                                    <td class="action"><input type="checkbox" /></td>
+                                    <td class="action"><i class="fa fa-bookmark-o"></i></td>
+                                    <td class="name text-danger"> [Não Enviada] <a href="#" data-bs-toggle="modal" data-bs-target="#modal2">${message.sender}</a></td>
+                                    <td class="subject"><a href="#" data-bs-toggle="modal" data-bs-target="#modal2">${message.subject}</a></td>
+                                    <td class="time">${message.time}</td>
+                                `;
+                                tableBody.appendChild(row);
+                            });
+                        }
+
+                        // Função para navegar entre páginas
+                        function navigatePage(action) {
+                            var currentPage = parseInt(document.querySelector('.pagination li.active a').innerText);
+                            var totalPages = Math.ceil(messages.length / 2); // 2 mensagens por página
+
+                            if (action === 'prev' && currentPage > 1) {
+                                showMessages(currentPage - 1);
+                            } else if (action === 'next' && currentPage < totalPages) {
+                                showMessages(currentPage + 1);
+                            }
+                        }
+
+                        // Inicializa a página
+                        showMessages(1);
+
+                        // Adiciona eventos aos botões de páginação
+                        document.querySelectorAll('.pagination a').forEach(function (pageLink) {
+                            pageLink.addEventListener('click', function (event) {
+                                event.preventDefault();
+                                showMessages(parseInt(this.innerText));
+                                document.querySelectorAll('.pagination li').forEach(function (li) {
+                                    li.classList.remove('active');
+                                });
+                                this.parentElement.classList.add('active');
+                            });
+                        });
+
+                        // Adiciona eventos aos botões de "Voltar" e "Próxima"
+                        document.querySelector('.pagination li.prev a').addEventListener('click', function (event) {
+                            event.preventDefault();
+                            navigatePage('prev');
+                        });
+
+                        document.querySelector('.pagination li.next a').addEventListener('click', function (event) {
+                            event.preventDefault();
+                            navigatePage('next');
+                        });
+                    });
+                </script>
+                <!-- END INBOX CONTENT -->
+
+                <script>
+                    $(document).ready(function () {
+                        $('#searchInput').on('input', function () {
+                            var searchTerm = $(this).val().toLowerCase();
+
+                            $('tbody tr').each(function () {
+                                var name = $(this).find('.name a').text().toLowerCase();
+                                var subject = $(this).find('.subject a').text().toLowerCase();
+
+                                var match = name.includes(searchTerm) || subject.includes(searchTerm);
+
+                                $(this).toggle(match);
+                            });
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal 1 -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nova mensagem</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <main>
+                            <div class="panel-body contacts">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modal3"><i class="fa-solid fa-address-book"></i>
+                                    Contatos
+                                </button>
+                            </div>
+                            <form>
+                                <div class="form-row mb-3">
+                                    <label for="to" class="col-2 col-sm-1 col-form-label">Para:</label>
+                                    <div class="col-10 col-sm-11">
+                                        <input type="email" class="form-control" id="to" placeholder="email">
+                                    </div>
+                                </div>
+                                <div class="form-row mb-3">
+                                    <label for="cc" class="col-2 col-sm-1 col-form-label">Assunto:</label>
+                                    <div class="col-10 col-sm-11">
+                                        <input type="email" class="form-control" id="cc" placeholder="assunto">
+                                    </div>
+                                </div>
+
+                                <div class="form-row mb-3">
+                                    <label for="cc" class="col-2 col-sm-1 col-form-label">CC:</label>
+                                    <div class="col-10 col-sm-11">
+                                        <input type="email" class="form-control" id="cc" placeholder="copias">
+                                    </div>
+                                </div>
+
+                            </form>
+                            <div class="row">
+                                <div class="col-sm-11 ml-auto">
+                                    <div class="toolbar" role="toolbar">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light">
+                                                <span class="fa fa-bold"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-light">
+                                                <span class="fa fa-italic"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-light">
+                                                <span class="fa fa-underline"></span>
+                                            </button>
+                                        </div>
+
+                                        <button type="button" class="btn btn-light">
+                                            <span class="fa fa-trash-o"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-light">
+                                            <span class="fa fa-paperclip"></span>
+                                        </button>
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <textarea class="form-control" id="message" name="body" rows="12"
+                                            placeholder="escrever"></textarea>
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <button type="submit" class="btn btn-danger"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-success">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.querySelector('#modal1 .btn-success').addEventListener('click', function () {
+                        alert('Mensagem enviada com sucesso!');
+                        $('#modal1').modal('hide');
+                    });
+                });
+            </script>
+        </div>
+        <!-- Modal 1 FIM -->
+
+        <!-- Modal 2 -->
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Caixa de saída</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <main>
+                            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+                                rel="stylesheet">
+                            <div class="container">
+                                <div class="row inbox">
+                                    <div class="col-md-3">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body inbox-menu">
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal1"
+                                                    class="btn btn-danger btn-block">Enviar Mensagem </a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="mensagem.html"><i class="fa fa-inbox"></i> Caixa de
+                                                            Entrada <span class="label label-danger"></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="caixadesaida.html"><i class="fa fa-rocket"></i> Caixa
+                                                            de Saída</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="Lixeira.html"><i class="fa fa-trash-o"></i> Lixo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="importantes.html"><i class="fa fa-bookmark"></i>
+                                                            Importantes<span class="label label-info"></span></a>
+                                                    </li>
+                                                    <li class="title">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-body contacts">
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#modal3"><i class="fa-solid fa-address-book"></i>
+                                                    Contatos
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div><!--/.col-->
+                                    <div class="col-md-9">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body message">
+                                                <span class="btn-group">
+
+                                                    <button id="importantBtn" class="btn btn-default"><span
+                                                            class="fa fa-bookmark-o"></span></button>
+                                                </span>
+                                                <span class="btn-group">
+                                                    <button class="btn btn-default"><span
+                                                            class="fa fa-mail-reply"></span></button>
+                                                    <button class="btn btn-default"><span
+                                                            class="fa fa-mail-reply-all"></span></button>
+                                                    <button class="btn btn-default"><span
+                                                            class="fa fa-mail-forward"></span></button>
+                                                </span>
+                                                <button id="trashBtn" class="btn btn-default"><span
+                                                        class="fa fa-trash-o"></span></button>
+
+                                                <div class="message-title">Dificuldade em Switch </div>
+                                                <div class="header">
+                                                    <img class="avatar"
+                                                        src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                                                    <div class="from text-dark">
+                                                        <span>Clenilson Junior</span>
+                                                        clenilsonjunior@holeczek.pl
+                                                    </div>
+                                                    <div class="date"><span class="fa fa-paper-clip"></span> Today,
+                                                        <b>3:47 PM</b>
+                                                    </div>
+                                                    <div class="menu"></div>
+                                                </div>
+                                                <div class="content">
+                                                    <p>
+                                                        Olá, mentor! Tenho enfrentado algumas dificuldades com a
+                                                        programação em C#. Sinto que preciso de ajuda para entender
+                                                        melhor os conceitos de switch. Será que você pode me orientar?
+                                                    </p>
+                                                    <blockquote>
+                                                        <!---->
+                                                    </blockquote>
+                                                </div>
+                                                <!--MONITOR-->
+                                                <div class="header">
+                                                    <img class="avatar"
+                                                        src="https://bootdey.com/img/Content/avatar/avatar3.png">
+                                                    <div class="from text-dark">
+                                                        <span>(EU) Monitor</span>
+                                                        monitorfulanodetal@holeczek.pl
+                                                    </div>
+                                                    <div class="date"><span class="fa fa-paper-clip"></span> Today,
+                                                        <b>4:10 PM</b>
+                                                    </div>
+                                                    <div class="menu"></div>
+                                                </div>
+                                                <div class="content">
+                                                    <p>
+                                                        Olá, Clenilson claro que te ajudo com switch em C#, que tal
+                                                        marcarmos uma aula no Teams? Ou prefere que conversemos por
+                                                        mensagem?
+                                                    </p>
+                                                    <blockquote>
+                                                        <!---->
+                                                    </blockquote>
+                                                </div>
+
+
+
+                                                <div class="attachments">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="label label-danger">zip</span>
+                                                            <b>bootstrap.zip</b> <i>(2,5MB)</i>
+                                                            <span class="quickMenu">
+                                                                <a href="#" class="fa fa-search"><i></i></a>
+                                                                <a href="#" class="fa fa-share"><i></i></a>
+                                                                <a href="#" class="fa fa-cloud-download"><i></i></a>
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label label-info">txt</span> <b>readme.txt</b>
+                                                            <i>(7KB)</i>
+                                                            <span class="quickMenu">
+                                                                <a href="#" class="fa fa-search"><i></i></a>
+                                                                <a href="#" class="fa fa-share"><i></i></a>
+                                                                <a href="#" class="fa fa-cloud-download"><i></i></a>
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label label-success">xls</span>
+                                                            <b>spreadsheet.xls</b> <i>(984KB)</i>
+                                                            <span class="quickMenu">
+                                                                <a href="#" class="fa fa-search"><i></i></a>
+                                                                <a href="#" class="fa fa-share"><i></i></a>
+                                                                <a href="#" class="fa fa-cloud-download"><i></i></a>
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <form method="post" action="">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" id="message" name="body"
+                                                            rows="12" placeholder="escreva"></textarea>
+                                                    </div>
+                                                    <div class="form-group pt-2">
+                                                        <button tabindex="3" type="submit"
+                                                            class="btn btn-success">Responder</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div><!--/.col-->
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.querySelector('#importantBtn').addEventListener('click', function () {
+
+                        alert('Email marcado como importante.');
+
+                        $('#modal2').modal('hide');
+                    });
+                });
+            </script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.querySelector('#trashBtn').addEventListener('click', function () {
+
+                        alert('Email movido para a Lixeira.');
+
+                        $('#modal2').modal('hide');
+                    });
+                });
+            </script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.querySelector('#modal2 .btn-success').addEventListener('click', function (event) {
+                        event.preventDefault();
+
+                        alert('Mensagem enviada com sucesso!');
+
+                        $('#modal2').modal('hide');
+                    });
+                });
+            </script>
+        </div>
+        <!-- Modal 2 FIM -->
+
+        <!-- Modal 3 -->
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Contatos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="row" id="respostaRequisicao"></div>
+
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        // URL da sua API para buscar os dados do contato (substitua pelo seu URL real)
+                                        var apiUrl = 'https://db.samuelcorreia4.repl.co/usuarios';
+
+                                        // Realiza a requisição à API usando o fetch
+                                        fetch(apiUrl)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                // Manipula os dados recebidos e preenche a div com a resposta da requisição
+
+                                                // Seleciona a div de resposta
+                                                var respostaDiv = document.getElementById('respostaRequisicao');
+
+                                                // Loop através dos contatos e cria os elementos HTML
+                                                data.forEach(contact => {
+                                                    // Cria um novo elemento de card para cada contato
+                                                    var cardElement = document.createElement('div');
+                                                    cardElement.className = 'col-xl-3 col-sm-6';
+
+                                                    cardElement.innerHTML = `
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <img src="${contact.foto}" alt="" class="avatar-md rounded-circle img-thumbnail" />
+                                                            </div>
+                                                            <div class="flex-1 ms-3">
+                                                                <h5 class="font-size-16 mb-1"><a href="#" class="text-dark">${contact.usuario}</a></h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-3 pt-1">
+                                                            <p class="text-muted mb-0"><i class="mdi mdi-phone font-size-15 align-middle pe-2 text-primary"></i>${contact.telefone}</p>
+                                                            <p class="text-muted mb-0 mt-2"><i class="mdi mdi-email font-size-15 align-middle pe-2 text-primary"></i>${contact.email}</p>
+                                                        </div>
+                                                        <div class="d-flex gap-2 pt-4">
+                                                            <button type="button" class="btn btn-primary btn-sm w-50" onclick="selecionarContato('${contact.usuario}', '${contact.telefone}', '${contact.email}')" data-bs-dismiss="modal"><i class="bx bx-message-square-dots me-1"></i>Selecionar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `;
+
+                                                    // Adiciona o novo card à div de resposta
+                                                    respostaDiv.appendChild(cardElement);
+                                                });
+                                            })
+                                            .catch(error => console.error('Erro na requisição:', error));
+
+                                        // Função para preencher o Modal 1 com as informações do contato selecionado
+                                        window.selecionarContato = function (nome, telefone, email) {
+                                            document.getElementById('to').value = email;
+                                            document.getElementById('cc').value = '';  // Limpar o campo CC
+                                            document.getElementById('message').value = `Olá ${nome},\n\n`;  // Mensagem inicial
+                                            $('#modal1').modal('show');  // Exibir o Modal 1
+                                        };
+                                    });
+                                </script>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ===== BOOTSTRAP ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

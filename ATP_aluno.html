@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <title>Conteúdos da Matéria</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <style>
+        .card-body iframe {
+            display: block;
+            margin: 0 auto;
+            width: 95%;
+            /* Ajuste a largura conforme necessário */
+        }
+    </style>
+
+    </style>
+</head>
+
+
+<body id="body-pd">
+
+    <a href="painel_aluno.html" class="btn btn-primary">Voltar</a>
+
+
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="painel_aluno.html" class="nav__logo"><img id="logo" src="assets/img/logo.png"
+                            width="15%"></a>
+                </div>
+
+                <div class="nav__list">
+                    <a href="painel_aluno.html" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Painel de Controle</span>
+                    </a>
+
+                    <a href="mensagem.html" class="nav__link">
+                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Mensagem</span>
+                    </a>
+
+                    <a href="agenda.html" class="nav__link">
+                        <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Calendario</span>
+                    </a>
+
+                    <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=teams&type=meetup-join&enableMobilePage=true&suppressPrompt=true&tenantId=14cbd5a7-ec94-46ba-b314-cc0fc972a161"
+                        class="nav__link">
+                        <ion-icon name="tv" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Teams</span>
+                    </a>
+
+
+                    <a href="ajuda.html" class="nav__link">
+                        <ion-icon name="help-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ajuda</span>
+                    </a>
+
+                    <a href="config.html" class="nav__link">
+                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div>
+                <img id="foto" src="assets/img/foto.png" width="12%">
+            </div>
+
+            <a href="login.html" class="nav__link">
+                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                <span class="nav__name">Sair</span>
+            </a>
+        </nav>
+    </div>
+
+    <section class="container-fluid">
+        <div class="titulo">
+            <h1>
+                <h1>Conteúdos da Matéria - ALGORITMOS E TECNICAS DE PROGRAMACAO </h1>
+            </h1>
+        </div>
+
+        <!-- Conteúdo 1 -->
+        <div class="card">
+            <div class="card-header" id="contentHeading1">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse1"
+                        aria-expanded="true" aria-controls="contentCollapse1">
+                        Semana 1 - Condicionais "if-else" C# <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse1" class="collapse" aria-labelledby="contentHeading1"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+                    <h3>O Mundo dos Condicionais "if-else" em C#: Uma Explicação Simplificada</h3>
+                    <p>O condicional "if-else" é uma parte fundamental da programação em C# e em muitas outras
+                        linguagens. Vamos dar uma olhada em uma explicação simplificada sobre como ele funciona.</p>
+                    <h4>1. Testando Condições:</h4>
+                    <p>O condicional "if-else" é como um guarda que toma decisões com base em condições. Ele começa
+                        testando uma condição, que é uma expressão que pode ser verdadeira (true) ou falsa (false).</p>
+                    <h4>2. O "if":</h4>
+                    <p>Se a condição testada no "if" for verdadeira, um bloco de código é executado. É como tomar uma
+                        ação se uma condição for atendida. Por exemplo, se você estiver chovendo, você pega um
+                        guarda-chuva.</p>
+                    <h4>3. O "else":</h4>
+                    <p>Se a condição no "if" for falsa, você pode especificar um bloco de código para ser executado no
+                        "else". Isso é como tomar uma ação alternativa se a primeira condição não for atendida. Por
+                        exemplo, se você não estiver chovendo, você não pega um guarda-chuva.</p>
+                    <h4>4. Tomando Decisões:</h4>
+                    <p>Usando "if" e "else" em conjunto, você pode tomar decisões com base em diferentes cenários. Por
+                        exemplo, se a idade de uma pessoa for maior que 18 anos, ela pode comprar bebidas alcoólicas;
+                        caso contrário, não pode.</p>
+                    <h4>5. "if-else if-else":</h4>
+                    <p>Você também pode usar uma série de "if-else if-else" para lidar com várias condições. Isso é como
+                        ter várias opções e ações baseadas em diferentes situações. Por exemplo, se estiver chovendo,
+                        pegue um guarda-chuva; se estiver úmido, use óculos de sol; caso contrário, leve um casaco.</p>
+                    <p>Em resumo, o condicional "if-else" em C# é uma maneira de fazer seu programa tomar decisões com
+                        base em condições. Ele permite que seu código escolha entre diferentes caminhos a serem
+                        seguidos, dependendo das situações. Portanto, da próxima vez que você se deparar com um
+                        "if-else" em seu código, lembre-se de que ele é como um guardião que orienta seu programa a agir
+                        de acordo com as condições condicionais.</p>
+
+                    <iframe width="699" height="393" src="https://www.youtube.com/embed/Ojm98Gg1rVw"
+                        title="Como a Internet chega na minha casa? - @Curso em Vídeo HTML5 e CSS3" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteudo 2 -->
+        <div class="card">
+            <div class="card-header" id="contentHeading2">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse3"
+                        aria-expanded="true" aria-controls="contentCollapse3">
+                        Semana 2 - "Switch-case" em C#!<ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse3" class="collapse" aria-labelledby="contentHeading3"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+
+                    <h3>Decifrando o "Switch-Case" em C#: Uma Explicação Simplificada</h3>
+                    <p>O condicional "switch-case" é uma parte importante da programação em C#, que permite tomar
+                        decisões com base em valores específicos. Vamos dar uma olhada em uma explicação simplificada
+                        sobre como ele funciona.</p>
+                    <h4>1. Avaliação de Valores:</h4>
+                    <p>O "switch-case" é como um inspetor que avalia um valor específico. Ele começa observando o valor
+                        de uma expressão e, em seguida, decide qual bloco de código executar com base nesse valor.</p>
+                    <h4>2. O "Switch":</h4>
+                    <p>O "switch" é como o inspetor de valores. Ele recebe a expressão que deseja avaliar e verificar
+                        cada "caso" para ver se corresponde ao valor da expressão. É como ter várias opções disponíveis.
+                    </p>
+                    <h4>3. Os "Case":</h4>
+                    <p>Os "case" são como etiquetas que identificam os valores específicos que o "switch" está
+                        avaliando. Cada "caso" contém um valor que será comparado com a expressão. Se houver uma
+                        correspondência, o bloco de código dentro desse "case" será executado.</p>
+                    <h4>4. O "Default":</h4>
+                    <p>Se nenhum dos "case" corresponde ao valor da expressão, você pode fornecer um "default". É como
+                        uma opção de último recurso, caso nenhum dos "case" se aplique. O bloco de código dentro de
+                        "default" é executado se nenhum "case" coincidir.</p>
+                    <h4>5. Tomando Decisões com Valores:</h4>
+                    <p>Usando "switch-case", você pode tomar decisões com base em valores específicos. Por exemplo, se a
+                        expressão para o dia da semana, o "switch-case" pode determinar qual ação realizar com base no
+                        dia atual.</p>
+                    <p>
+                        Em resumo, o condicional "switch-case" em C# é uma maneira de direcionar seu programa para
+                        diferentes blocos de código com base em valores específicos. É como ter várias opções
+                        disponíveis e escolher a ação com base no valor da expressão. Portanto, da próxima vez que você
+                        encontrar um "switch-case" em seu código, lembre-se de que ele é como um inspetor que orienta
+                        seu programa com base nos valores fornecidos.</p>
+
+
+                    <iframe width="699" height="393" src="https://www.youtube.com/embed/v2H1MNSkE_s"
+                        title="A diferença entre HTML, CSS e JavaScript - @Curso em Vídeo HTML5 e CSS3" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo 3 -->
+        <div class="card">
+            <div class="card-header" id="contentHeading3">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse4"
+                        aria-expanded="true" aria-controls="contentCollapse4">
+                        Semana 3 - Estruturas de Repetição (for) c# <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse4" class="collapse" aria-labelledby="contentHeading4"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+
+
+                    <h3>Explorando a Estrutura de Repetição "for" em C#: Uma Explicação Simplificada</h3>
+                    <p>A estrutura de repetição "for" é uma parte importante da programação em C#, que permite executar
+                        um bloco de código várias vezes. Vamos dar uma olhada em uma explicação simplificada sobre como
+                        ela funciona.</p>
+
+                    <h4>1. Contagem e Controle:</h4>
+                    <p>O "for" é como um contador e controlador de repetições. Ele começa especificando uma variável de
+                        controle, uma condição de continuação e um incremento (ou decremento). A variável de controle é
+                        como o contador.</p>
+
+                    <h4>2. Inicialização da Variável de Controle:</h4>
+                    <p>O "for" inicia a variável de controle com um valor inicial. Isso é como definir o ponto de
+                        partida do contador. Por exemplo, começando com 1.</p>
+
+                    <h4>3. Condição de Continuação:</h4>
+                    <p>O "for" estabelece uma condição que determina quando a repetição deve parar. Enquanto a condição
+                        for verdadeira, o bloco de código é executado repetidamente. É como dizer até onde o contador
+                        deve ir. Por exemplo, continue até que o contador seja menor ou igual a 10.</p>
+
+                    <h4>4. Incremento/Decremento da Variável de Controle:</h4>
+                    <p>O "for" especifica como a variável de controle deve ser alterada a cada repetição. Isso é como
+                        dizer como o contador deve ser atualizado após cada execução do bloco de código. Por exemplo,
+                        aumentar o contador em 1 a cada repetição.</p>
+
+                    <h4>5. Realizando Tarefas Repetitivas:</h4>
+                    <p>Usando "for", você pode realizar tarefas repetitivas, como percorrer uma lista de itens, imprimir
+                        valores sequenciais ou realizar cálculos repetidos.</p>
+
+                    <h4>6. Parando a Repetição:</h4>
+                    <p>Quando a condição de continuação não for mais atendida, a repetição para. É como dizer ao
+                        contador para parar quando atingir um determinado limite.</p>
+
+                    <p>Em resumo, a estrutura de repetição "for" em C# é uma maneira de executar um bloco de código
+                        várias vezes, controlando o processo por meio de uma variável de controle, uma condição de
+                        continuação e um incremento. É como automatizar tarefas repetitivas de maneira eficiente.
+                        Portanto, da próxima vez que você usar um "for" em seu código, lembre-se de que ele é como um
+                        contador que realiza uma ação específica um número determinado de vezes.</p>
+
+
+
+                    <iframe width="699" height="393" src="https://www.youtube.com/embed/GoQLs_sJLXs"
+                        title="Front-end, Back-end e Full stack - @Curso em Vídeo HTML5 e CSS3" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Conteúdo 4 -->
+        <div class="card">
+            <div class="card-header" id="contentHeading4">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse5"
+                        aria-expanded="true" aria-controls="contentCollapse5">
+                        Semana 4 - Estruturas de Repetição (while) c# <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse5" class="collapse" aria-labelledby="contentHeading5"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+
+                    <h3>Explorando a Estrutura de Repetição "while" em C#:</h3>
+                    <p>A estrutura de repetição "while" é uma parte importante da programação em C#, que permite
+                        executar um bloco de código repetidamente enquanto uma condição específica for verdadeira. Vamos
+                        dar uma olhada em uma explicação simplificada, com base no material da Profa. Soraia, sobre como
+                        ela funciona.</p>
+
+                    <h4>1. Requisitos e Continuidade:</h4>
+                    <p>O "while" é como um segurança que fica de olho em uma condição. Ele começa especificando uma
+                        condição que deve ser verdadeira para continuar a execução do bloco de código. A repetição
+                        acontece enquanto a condição for verdadeira.</p>
+
+                    <h4>2. Avaliação Inicial:</h4>
+                    <p>O "while" avalia a condição antes de executar o bloco de código. Se a condição for verdadeira
+                        desde o início, o bloco é executado. Se a condição for falsa desde o início, o bloco pode nunca
+                        ser executado.</p>
+
+                    <h4>3. Atualização da Condição:</h4>
+                    <p>O "while" não atualiza automaticamente a condição. Você precisa garantir que dentro do bloco de
+                        código exista alguma lógica que possa, eventualmente, tornar a condição falsa. Caso contrário, a
+                        repetição pode se tornar infinita.</p>
+
+                    <h4>4. Realizando Tarefas Repetitivas:</h4>
+                    <p>Usando "while", você pode realizar tarefas repetitivas, como processar dados em uma lista,
+                        interagir com o usuário até que ele forneça uma resposta válida ou executar uma ação até que uma
+                        determinada condição seja atendida.</p>
+
+                    <h4>5. Controle Fino:</h4>
+                    <p>O "while" oferece um controle fino sobre quando a repetição começa e para. Você pode personalizar
+                        a condição e o momento em que a repetição ocorre, tornando-o adequado para situações em que a
+                        lógica de repetição é complexa.</p>
+
+                    <p>Em resumo, a estrutura de repetição "while" em C#, com base no material da Profa. Soraia, é uma
+                        maneira de executar um bloco de código repetidamente, contanto que uma condição específica seja
+                        atendida. Ela permite uma abordagem flexível para realizar tarefas repetitivas e exige que você
+                        controle explicitamente a condição de parada. Portanto, da próxima vez que você usar um "while"
+                        em seu código, lembre-se de que ele é como um segurança que mantém um olhar atento sobre uma
+                        condição antes de permitir a execução do bloco.</p>
+
+
+                    <iframe width="699" height="393" src="https://www.youtube.com/embed/P5OiZFmG8bc"
+                        title="Título do Vídeo 5" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo 5 -->
+        <div class="card">
+            <div class="card-header" id="contentHeading5">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse6"
+                        aria-expanded="true" aria-controls="contentCollapse6">
+                        Semana 5 - Estruturas de Repetição (do-while) <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse5" class="collapse" aria-labelledby="contentHeading5"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+
+
+                    <h3>Desvendando a Estrutura de Repetição "do-while" em C#: Uma Explicação Simplificada</h3>
+                    <p>A estrutura de repetição "do-while" é uma parte essencial da programação em C#, permitindo que
+                        você execute um bloco de código repetidamente com base em uma condição específica. Vamos
+                        explorar uma explicação simplificada sobre como ela funciona.</p>
+
+                    <h4>1. Execução Garantida:</h4>
+                    <p>O "do-while" é como um anfitrião que convida você para a festa antes mesmo de verificar quem está
+                        presente. Ele começa executando o bloco de código pelo menos uma vez, independentemente da
+                        condição.</p>
+
+                    <h4>2. Avaliação da Condição:</h4>
+                    <p>Após a primeira execução do bloco de código, o "do-while" avalia a condição. Se a condição for
+                        verdadeira, o bloco de código é executado novamente. Caso contrário, a repetição para.</p>
+
+                    <h4>3. Controle Fino e Atualização:</h4>
+                    <p>O "do-while" oferece controle refinado, permitindo que você personalize a condição e o momento em
+                        que a repetição ocorre. Você deve garantir que dentro do bloco de código exista lógica que
+                        possa, eventualmente, tornar a condição falsa, para evitar repetições infinitas.</p>
+
+                    <h4>4. Realizando Tarefas Repetitivas:</h4>
+                    <p>Usando "do-while", você pode realizar tarefas repetitivas, como interagir com o usuário até que
+                        ele forneça uma resposta válida ou processar dados em uma lista até que uma determinada condição
+                        seja atendida.</p>
+
+                    <h4>5. Útil para Validações:</h4>
+                    <p>O "do-while" é especialmente útil para situações em que você deseja garantir que um bloco de
+                        código seja executado pelo menos uma vez antes de verificar uma condição, o que é comum em
+                        validações de entrada de dados.</p>
+
+                    <p>Em resumo, a estrutura de repetição "do-while" em C# é uma maneira de executar um bloco de código
+                        repetidamente, garantindo que ele seja executado pelo menos uma vez. Ela permite um controle
+                        preciso sobre a condição de parada e é útil em cenários em que você precisa validar dados ou
+                        realizar ações repetidas. Portanto, da próxima vez que você usar um "do-while" em seu código,
+                        lembre-se de que ele é como um anfitrião que convida você para a festa antes mesmo de saber quem
+                        está presente, mas garante que todos tenham a chance de participar.</p>
+
+
+
+                    <iframe width="699" height="393" src="https://www.youtube.com/embed/mb-r3-A6yYo"
+                        title="Título do Vídeo 5" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Conteúdo 6 -->
+        <div class="card">
+            <div class="card-header" id="contentHeading6">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse6"
+                        aria-expanded="true" aria-controls="contentCollapse6">
+                        Semana 6 - Vetores (arrays) em c# <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse6" class="collapse" aria-labelledby="contentHeading6"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+
+                    <h3>Explorando Vetores em C#: Uma Explicação Simplificada</h3>
+                    <p>Vetores são uma estrutura de dados essencial em C# que permite armazenar uma coleção de elementos
+                        do mesmo tipo. Vamos dar uma olhada em uma explicação simplificada sobre como eles funcionam.
+                    </p>
+
+                    <h4>1. Coleção de Elementos:</h4>
+                    <p>Um vetor é como uma coleção de elementos semelhantes organizados em sequência. Esses elementos
+                        podem ser números, textos, objetos ou qualquer outro tipo de dado suportado pela linguagem.</p>
+
+                    <h4>2. Índices Numéricos:</h4>
+                    <p>Cada elemento em um vetor é identificado por um índice numérico. Os índices começam em 0 para o
+                        primeiro elemento, 1 para o segundo elemento e assim por diante. O índice ajuda a acessar e
+                        manipular elementos específicos no vetor.</p>
+
+                    <h4>3. Tamanho Fixo:</h4>
+                    <p>Os vetores em C# têm um tamanho fixo, o que significa que você precisa especificar o número de
+                        elementos que o vetor conterá quando o criar. Após a criação, o tamanho não pode ser alterado.
+                    </p>
+
+                    <h4>4. Declaração e Inicialização:</h4>
+                    <p>Para criar um vetor, você deve declará-lo e inicializá-lo. A declaração informa ao compilador o
+                        tipo de dado que o vetor conterá, enquanto a inicialização define o tamanho e, opcionalmente,
+                        atribui valores iniciais aos elementos.</p>
+
+                    <h4>5. Acesso aos Elementos:</h4>
+                    <p>Você pode acessar elementos individuais em um vetor usando seus índices. Por exemplo, se você
+                        tiver um vetor de inteiros, pode acessar o terceiro elemento usando o índice 2: `vetor[2]`.</p>
+
+                    <h4>6. Manipulação de Dados:</h4>
+                    <p>Vetores permitem que você armazene, modifique e recupere dados de forma eficiente. Isso é útil
+                        para lidar com coleções de dados, como listas de compras, notas de alunos ou informações de
+                        contato.</p>
+
+                    <h4>7. Laços de Repetição:</h4>
+                    <p>Os vetores são frequentemente combinados com estruturas de repetição, como "for" ou "foreach",
+                        para processar todos os elementos de um vetor de maneira iterativa.</p>
+
+                    <p>Em resumo, vetores em C# são uma maneira de armazenar e manipular coleções de elementos do mesmo
+                        tipo. Eles são especialmente úteis quando você precisa lidar com um grupo de dados relacionados
+                        e deseja acessar ou modificar esses dados de forma eficiente. Portanto, da próxima vez que você
+                        trabalhar com vetores em seu código, lembre-se de que eles são como um conjunto ordenado de
+                        elementos, cada um acessado por um índice numérico.</p>
+
+
+                    <iframe width="699" height="393" src="https://www.youtube.com/embed/utkQHvmmJ38"
+                        title="Título do Vídeo 6" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/materias.js"></script>
+
+
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ===== BOOTSTRAP ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- arquivos style -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="assets/calendar/css/style.css" rel="stylesheet">
+  <link href="assets/calendar/css/darkMode.css" rel="stylesheet">
+
+  <title>PUC Minas - Programa de Monitoria</title>
+</head>
+<!-- dark mode -->
+
+<div class="toggle">
+  <input id="switch" type="checkbox" name="theme">
+  <label for="switch">Toggle</label>
+</div>
+
+<!-- -------- -->
+
+<body id="body-pd">
+  <div class="l-navbar" id="navbar">
+    <nav class="nav">
+      <div>
+        <div class="nav__brand">
+          <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+          <a href="agenda.html" class="nav__logo"><img id="logo" src="assets/img/logo.png" width="15%"></a>
+        </div>
+
+        <div class="nav__list">
+          <a href="painel_aluno.html" class="nav__link active">
+            <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Painel de Controle</span>
+          </a>
+
+          <a href="mensagem.html" class="nav__link">
+            <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Mensagem</span>
+          </a>
+
+          <a href="agenda.html" class="nav__link">
+            <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Calendario</span>
+          </a>
+
+          <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=teams&type=meetup-join&enableMobilePage=true&suppressPrompt=true&tenantId=14cbd5a7-ec94-46ba-b314-cc0fc972a161"
+            class="nav__link">
+            <ion-icon name="tv" class="nav__icon"></ion-icon>
+            <span class="nav__name">Teams</span>
+          </a>
+
+
+          <a href="ajuda.html" class="nav__link">
+            <ion-icon name="help-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Ajuda</span>
+          </a>
+
+          <a href="config.html" class="nav__link">
+            <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Configurações</span>
+          </a>
+        </div>
+      </div>
+
+
+
+
+      <div>
+        <img id="foto" src="assets/img/foto.png" width="12%">
+      </div>
+
+
+
+      <a href="login.html" class="nav__link">
+        <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+        <span class="nav__name">Sair</span>
+      </a>
+    </nav>
+  </div>
+  <div id="container">
+    <div id="header">
+      <div id="monthDisplay"></div>
+
+      <div>
+        <button id="backButton">Voltar</button>
+        <button id="nextButton">Próximo</button>
+      </div>
+
+    </div>
+
+    <div id="weekdays">
+      <div>Domingo</div>
+      <div>Segunda-feira</div>
+      <div>Terça-feira</div>
+      <div>Quarta-feira</div>
+      <div>Quinta-feira</div>
+      <div>Sexta-feira</div>
+      <div>Sábado</div>
+    </div>
+
+
+    <!-- div dinamic -->
+    <div id="calendar"></div>
+
+
+  </div>
+
+  <div id="newEventModal">
+    <h2>Agende a mentoria:</h2>
+    Nome do monitor: <input id="eventTitleInput" placeholder="Monitor" />
+    Disciplina: <input id="eventDisciplinaInput" placeholder="Disciplina" />
+    Tema: <input id="eventTemaInput" placeholder="Tema:" />
+    Link da Reunião: <input id="eventLinkInput" placeholder="Link da Reunião" />
+
+    <button id="saveButton"> Salvar</button>
+    <button id="cancelButton">Cancelar</button>
+  </div>
+
+  <div id="deleteEventModal">
+    <h2>Evento</h2>
+
+    <div id="eventText"></div><br>
+
+
+    <button id="deleteButton">Deletar</button>
+    <button id="closeButton">Fechar</button>
+  </div>
+
+  <div id="modalBackDrop"></div>
+
+  <!-- ===== IONICONS ===== -->
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+  <!-- ===== MAIN JS ===== -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- ===== BOOTSTRAP ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!--Calendario JS-->
+  <script src="assets/calendar/scripts/darkMode.js"></script>
+  <script src="assets/calendar/scripts/main.js"></script>
+
+</body>
+
+</html>

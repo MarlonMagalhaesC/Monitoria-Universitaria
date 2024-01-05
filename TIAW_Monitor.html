@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <title>Conteúdos da Matéria</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <style>
+        .card-body iframe {
+            display: block;
+            margin: 0 auto;
+            width: 95%;
+            /* Ajuste a largura conforme necessário */
+        }
+
+        .edit-btn,
+        .delete-btn {
+            position: absolute;
+            top: 5px;
+            z-index: 999;
+            padding: 0.2rem 0.4rem;
+            font-size: 0.75rem;
+        }
+
+        .edit-btn ion-icon,
+        .delete-btn ion-icon {
+            font-size: 1rem;
+        }
+
+        .edit-btn {
+            right: 40px;
+            /* Distância da borda direita para o botão de edição */
+        }
+
+        .delete-btn {
+            right: 5px;
+            /* Distância da borda direita para o botão de exclusão */
+        }
+
+        .card-header {
+            position: relative;
+        }
+    </style>
+
+    </style>
+</head>
+
+<body id="body-pd">
+    <a href="painel_monitor.html" class="btn btn-primary">Voltar</a>
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="painel_monitor.html" class="nav__logo"><img id="logo" src="assets/img/logo.png"
+                            width="15%"></a>
+                </div>
+
+                <div class="nav__list">
+                    <a href="painel_monitor.html" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Painel de Controle</span>
+                    </a>
+
+
+                    <a href="mensagem.html" class="nav__link">
+                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Mensagem</span>
+                    </a>
+
+                    <a href="agenda.html" class="nav__link">
+                        <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Calendario</span>
+                    </a>
+
+                    <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=teams&type=meetup-join&enableMobilePage=true&suppressPrompt=true&tenantId=14cbd5a7-ec94-46ba-b314-cc0fc972a161"
+                        class="nav__link">
+                        <ion-icon name="tv" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Teams</span>
+                    </a>
+
+
+                    <a href="ajuda.html" class="nav__link">
+                        <ion-icon name="help-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ajuda</span>
+                    </a>
+
+                    <a href="config.html" class="nav__link">
+                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div>
+                <img id="foto" src="assets/img/foto.png" width="15%">
+            </div>
+
+            <a href="login.html" class="nav__link">
+                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                <span class="nav__name">Sair</span>
+            </a>
+        </nav>
+    </div>
+
+    <section class="container-fluid">
+        <div class="titulo">
+            <h1>
+                <h1>Conteúdos da Matéria - Trabalho Interdisciplinar de aplicação web </h1>
+            </h1>
+        </div>
+
+        <!-- Conteúdo 1 -->
+        <div class="card">
+            <div class="card-header position-relative" id="contentHeading1">
+                <button class="btn btn-primary edit-btn"><ion-icon name="create-outline"></ion-icon></button>
+                <button class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse1"
+                        aria-expanded="true" aria-controls="contentCollapse1">
+                        1 - Apresentação da Disciplina <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse1" class="collapse" aria-labelledby="contentHeading1"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+
+
+                    <h3>Explorando o Trabalho Interdisciplinar - Aplicações Web: Uma Visão Simplificada</h3>
+
+                    <p>Sejam bem-vindos à disciplina de Trabalho Interdisciplinar - Aplicações Web! 😄</p>
+
+                    <p>Nesta disciplina, nosso objetivo é guiar vocês pelo processo iterativo e incremental de
+                        desenvolvimento de uma aplicação completa, fazendo uso de técnicas e ferramentas de
+                        desenvolvimento front-end para a web. Tudo isso acontece por meio do trabalho em equipe.</p>
+
+                    <p>Essa disciplina integra conceitos de outras disciplinas deste semestre, notadamente Algoritmos e
+                        Estruturas de Dados, Introdução à Computação e Desenvolvimento de Interfaces Web.</p>
+
+                    <p>A abordagem metodológica adotada nessa disciplina abrange dois frameworks amplamente utilizados
+                        na indústria de desenvolvimento de software: o Design Thinking e o Scrum Framework, conforme
+                        ilustrado na Figura 1. O Design Thinking é aplicado na primeira etapa, que chamamos de
+                        Concepção, onde equipes são formadas e problemas a serem tratados são definidos. Já o Scrum
+                        Framework é empregado na segunda etapa, denominada Desenvolvimento.</p>
+
+                    <p>Fonte:
+                        <a href="https://jointecnologia.com.br/concepcao-e-desenvolvimento-de-software-com-design-thinking-e-scrum/"
+                            target="_blank" rel="noopener noreferrer"> Clique aqui </a>
+                    </p>
+
+                    <p>Na primeira etapa, o produto principal é o Backlog do Produto (Product Backlog), que estabelece
+                        de forma geral o que será desenvolvido na segunda etapa. Embora haja uma sequência de
+                        atividades, existe certa flexibilidade no processo.</p>
+
+                    <p>A condução da disciplina será realizada pelos professores, que acompanharão os alunos desde o
+                        início até o fim. É importante destacar que as equipes têm autonomia sobre o rumo do projeto e
+                        podem revisar o que está sendo feito a qualquer momento, levando em consideração as lições
+                        aprendidas ao longo do processo.</p>
+
+                    <h4>Etapa de Concepção</h4>
+
+                    <p>A primeira parte tem como objetivo definir um problema a ser abordado pelos alunos durante o
+                        semestre e formar grupos. Essa etapa segue as etapas de um workshop orientado pelas práticas de
+                        Design Thinking. Ao final desta etapa, teremos equipes formadas, um problema definido e uma
+                        visão geral da solução a ser implementada, o que chamamos de Product Backlog ou visão de um
+                        Produto Mínimo Viável (MVP).</p>
+
+                    <p><strong>Tarefas a serem realizadas:</strong></p>
+                    Desenvolvimento das Funcionalidades <br>
+                    Definição das estruturas de dados <br>
+                    Programação do software (JavaScript) <br>
+                    Definição de identidade visual <br>
+                    Evolução do relatório técnico do projeto (iniciado na fase de concepção) <br>
+                    Elaboração da apresentação do projeto (PowerPoint) <br>
+                    Montagem do vídeo do projeto <br>
+                    Apresentação do projeto para a turma <br>
+
+
+                    <p>
+                    <h6> Ao final da etapa de Desenvolvimento, espera-se que o grupo entregue uma aplicação totalmente
+                        funcional, disponível na Internet, uma apresentação e um vídeo sobre o projeto bem como um
+                        relatório técnico com a documentação completa do projeto. </h6>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteudo 2 -->
+        <div class="card">
+            <div class="card-header position-relative" id="contentHeading1">
+                <button class="btn btn-primary edit-btn"><ion-icon name="create-outline"></ion-icon></button>
+                <button class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#contentCollapse2"
+                        aria-expanded="true" aria-controls="contentCollapse3">
+                        2- Processo de Avaliação<ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </h2>
+            </div>
+            <div id="contentCollapse2" class="collapse" aria-labelledby="contentHeading2"
+                data-parent="#contentAccordion">
+                <div class="card-body">
+
+
+                    <!DOCTYPE html>
+                    <html>
+
+                    <head>
+                        <title>Processo de Avaliação da Disciplina</title>
+                    </head>
+
+                    <body>
+                        <h3>Processo de Avaliação</h3>
+
+                        <p>O processo de avaliação está baseado na evolução do software a ser construído pela equipe e
+                            mescla avaliações em grupo e avaliações individuais. As entregas são organizadas em 4
+                            sprints durante o semestre.</p>
+
+                        <p>É importante ressaltar que não há provas nessa disciplina e não há reavaliação ou outras
+                            oportunidades de recuperação.</p>
+
+                        <p>As etapas do processo de avaliação (sprints) e os detalhes de cada etapa são apresentados na
+                            figura que se segue e detalhados na sequência.</p>
+
+                        <table border="1">
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Avaliação do Desempenho Acadêmico</td>
+                                <td>05 pontos</td>
+                            </tr>
+                            <tr>
+                                <td>Sprint 1</td>
+                                <td>15 pontos</td>
+                            </tr>
+                            <tr>
+                                <td>Sprint 2</td>
+                                <td>20 pontos</td>
+                            </tr>
+                            <tr>
+                                <td>Sprint 3</td>
+                                <td>20 pontos</td>
+                            </tr>
+                            <tr>
+                                <td>Sprint 4</td>
+                                <td>40 pontos</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>100 pontos</td>
+                            </tr>
+                        </table>
+
+                        <h1> Sprint 1 - Concepção do Projeto </h1>
+                        <p>Nessa sprint, o trabalho é feito em grupo e a avaliação é realizada pelo professor. A entrega
+                            dos artefatos pode ser feita por qualquer membro do grupo a partir das tarefas cadastradas
+                            no Canvas.
+
+                            Após a entrega, os membros do grupo apresentam o projeto para toda a turma. A apresentação é
+                            obrigatória e pode ser feita por um ou mais membros, a critério do próprio grupo. O aluno ou
+                            equipe ausente implicará na perda de 50% dos pontos da sprint 1.
+
+                            O grupo deve entregar e apresentar os artefatos da etapa de concepção que são detalhados na
+                            tabela a seguir. </p>
+
+
+                        <h1> Sprints 2 e 3 - Programação de Funcionalidades </h1>
+                        <p>Após a etapa de concepção, é hora de desenvolver o software projetado. O grupo deve se reunir
+                            e definir quais serão as funcionalidades que cada membro do grupo ficará responsável. Embora
+                            estejam realizando entregas individuais, o grupo deve continuar se reunindo e o trabalho de
+                            cada membro deve contribuir para o projeto idealizado durante a concepção. É importante ter
+                            em mente que, ao final, na Sprint 4, o grupo deve reunir as contribuições individuais e
+                            consolidar em uma entrega única.
+
+                            Assim sendo, nas sprints 2 e 3, cada aluno deve entregar uma implementação que envolve a
+                            programação do software e a avaliação é individual. Os detalhes destas entregas constam no
+                            menu Tarefas. Para essas entregas, não há apresentação do resultado para toda a turma,
+                            apenas para o professor. </p>
+
+
+                        <h1> Sprint 4 - Projeto Completo </h1>
+                        <p>Nessa sprint, o trabalho é feito em grupo novamente e a avaliação é realizada pelo professor.
+                            A entrega dos artefatos pode ser feita por qualquer membro do grupo a partir da atividade
+                            cadastrada no Canvas. O grupo inteiro é avaliado quanto a forma de organização dos artefatos
+                            do projeto, a documentação, a apresentação e o sistema entregue.
+
+                            Após a entrega, os membros do grupo fazem uma apresentação do projeto para toda a turma. A
+                            apresentação é obrigatória e pode ser feita por um ou mais membros, a critério do próprio
+                            grupo. O aluno ou equipe ausente implicará na perda de 50% dos pontos da sprint 4. </p>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/materias.js"></script>
+
+
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ===== BOOTSTRAP ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

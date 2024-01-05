@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- ===== ICON ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>PUC Minas - Programa de Monitoria</title>
+</head>
+
+<body id="body-pd">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="painel_monitor.html" class="nav__logo"><img id="logo" src="assets/img/logo.png"
+                            width="15%"></a>
+                </div>
+
+                <div class="nav__list">
+                    <a href="painel_monitor.html" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Painel do Monitor</span>
+                    </a>
+
+                    <a href="mensagem.html" class="nav__link">
+                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Mensagem</span>
+                    </a>
+
+                    <a href="agenda.html" class="nav__link">
+                        <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Calendario</span>
+                    </a>
+
+                    <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=teams&type=meetup-join&enableMobilePage=true&suppressPrompt=true&tenantId=14cbd5a7-ec94-46ba-b314-cc0fc972a161"
+                        class="nav__link">
+                        <ion-icon name="tv" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Teams</span>
+                    </a>
+
+
+                    <a href="ajuda.html" class="nav__link">
+                        <ion-icon name="help-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ajuda</span>
+                    </a>
+
+                    <a href="config.html" class="nav__link">
+                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div>
+                <img id="foto" src="assets/img/foto.png" width="15%">
+            </div>
+
+
+
+            <a href="login.html" class="nav__link">
+                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                <span class="nav__name">Sair</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="add_conteudo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-regular fa-file"></i> Adicionar Novo Conteúdo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/salvar-conteudo" method="post">
+                        <div class="form-group">
+                            <label for="titulo">Digite o título da Semana:</label>
+                            <input type="text" class="form-control" id="titulo" name="titulo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="texto">Digite seu texto:</label>
+                            <textarea class="form-control" id="texto" name="texto" rows="4"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="video"><i class="fa-solid fa-video"></i> Adicionar Mídia</label>
+                            <input type="file" class="form-control-file" id="video" name="video" accept="video/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Concluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-fluid">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3 pt-4" id="card1">
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="assets/img/DWnovo.png.gif" class="card-img-top" alt="ONG 1" id="cardImage1">
+                        <div class="card-body">
+                            <h5 class="card-title">Introdução a Computação</h5>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="imagem" style="margin-bottom: 1%;">Imagem:</label>
+                                    <label for="upload1" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                        <span class="d-none d-sm-block">Carregar</span>
+                                        <i class="bx bx-upload d-block d-sm-none"></i>
+                                        <input type="file" id="upload1" class="account-file-input" hidden accept="image/png, image/jpeg" onchange="alterarImagemCapa(1)" />
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-0" style="margin-top: -7%;">Formatos permitidos JPG, GIF ou PNG</p>
+                            <a href="IC_Monitor.html" class="btn btn-primary" style="margin-top: 2%;">Acessar</a>
+                            <button type="button" class="btn btn-success" style="margin-top: 2%;" data-bs-toggle="modal"
+                                    data-bs-target="#add_conteudo">
+                                Adicionar Conteudo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="col-md-3 pt-4" id="card2">
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="assets/img/mobile.png" class="card-img-top" alt="ONG 2" id="cardImage2">
+                        <div class="card-body">
+                            <h5 class="card-title">Trabalho interdisciplinar</h5>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="imagem" style="margin-bottom: 1%;">Imagem:</label>
+                                    <label for="upload2" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                        <span class="d-none d-sm-block">Carregar</span>
+                                        <i class="bx bx-upload d-block d-sm-none"></i>
+                                        <input type="file" id="upload2" class="account-file-input" hidden accept="image/png, image/jpeg" onchange="alterarImagemCapa(2)" />
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-0" style="margin-top: -7%;">Formatos permitidos JPG, GIF ou PNG</p>
+                            <a href="TIAW_Monitor.html" class="btn btn-primary" style="margin-top: 2%;">Acessar</a>
+                            <button type="button" class="btn btn-success" style="margin-top: 2%;" data-bs-toggle="modal"
+                                    data-bs-target="#add_conteudo">
+                                Adicionar Conteudo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-md-3 pt-4" id="card3">
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="assets/img/agoritmo.png" class="card-img-top" alt="ONG 3" id="cardImage3">
+                        <div class="card-body">
+                            <h5 class="card-title">Algoritmos e Programação</h5>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="imagem" style="margin-bottom: 1%;">Imagem:</label>
+                                    <label for="upload3" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                        <span class="d-none d-sm-block">Carregar</span>
+                                        <i class="bx bx-upload d-block d-sm-none"></i>
+                                        <input type="file" id="upload3" class="account-file-input" hidden accept="image/png, image/jpeg" onchange="alterarImagemCapa(3)" />
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-0" style="margin-top: -7%;">Formatos permitidos JPG, GIF ou PNG</p>
+                            <a href="ATP_Monitor.html" class="btn btn-primary" style="margin-top: 2%;">Acessar</a>
+                            <button type="button" class="btn btn-success" style="margin-top: 2%;" data-bs-toggle="modal"
+                                    data-bs-target="#add_conteudo">
+                                Adicionar Conteudo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Função para alterar a imagem de capa do card
+        function alterarImagemCapa(cardNumber) {
+            // Obtém o elemento de input de arquivo
+            var input = document.getElementById('upload' + cardNumber);
+    
+            // Verifica se um arquivo foi selecionado
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+    
+                // Define a função de callback quando a imagem for carregada
+                reader.onload = function (e) {
+                    // Obtém o elemento da imagem do card
+                    var cardImage = document.getElementById('cardImage' + cardNumber);
+    
+                    // Define a nova imagem de capa
+                    cardImage.src = e.target.result;
+                };
+    
+                // Lê o arquivo como URL de dados
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    
+    </section>
+
+
+
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ===== BOOTSTRAP ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
